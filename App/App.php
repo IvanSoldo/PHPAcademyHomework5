@@ -1,8 +1,6 @@
 <?php
 
 namespace App;
-require_once 'App/Util/Prefix.php';
-
 
 final class App {
 
