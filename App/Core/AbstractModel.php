@@ -5,13 +5,18 @@ namespace App\Core;
 require_once 'App/Util/Prefix.php';
 use App\Util\Prefix;
 
-abstract class PrefixAdder {
+abstract class AbstractModel {
 
     protected $prefix;
 
-    protected function addPrefix() {
+    private function addPrefix() {
         $this->prefix = new Prefix();
         return $this->prefix->getDate();
+    }
+
+    public function viewAction()
+    {
+        return $this->addPrefix() . ' ' . get_class($this);
     }
 
 }
