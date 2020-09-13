@@ -8,7 +8,7 @@ $dir = 'App/Models';
 $files = scandir($dir);
 
 for ($i = 0; $i < count($files); $i++) {
-    if (strpos($files[$i], 'php') == false) {
+    if (!strpos($files[$i], 'php')) {
         unset($files[$i]);
     }
 }
